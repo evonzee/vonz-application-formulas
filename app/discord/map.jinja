@@ -1,0 +1,20 @@
+{% set discord = salt['grains.filter_by']({
+    'Windows': {
+        'package': 'discord',
+        'installer': 'chocolatey.installed'
+    },
+    'MacOS': {
+        'package': 'Caskroom/cask/discord',
+        'installer': 'pkg.installed'
+    },
+    'Arch': {
+        'package': 'discord',
+        'installer': {
+          'cmd.run': [
+            {'unless': 'pacman -Qi discord'},
+            {'runas': 'aur-builder'},
+            {'name': ' yay -S discord --noconfirm'}
+          ]
+        }
+    },
+}, merge=salt['pillar.get']('discord:lookup')) %}
