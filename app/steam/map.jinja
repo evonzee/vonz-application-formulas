@@ -8,7 +8,7 @@
         'package': 'steam',
         'installer': {
           'cmd.run': [
-            {'unless': 'flatpak list | grep Steame'},
+            {'unless': 'flatpak list | grep Steam'},
             {'runas': user},
             {'name': ' flatpak install -y flathub com.valvesoftware.Steam'}
           ]
