@@ -4,4 +4,4 @@
 flatpak:
   pkg.installed
 
-{% endif %}}
+{% endif %}
