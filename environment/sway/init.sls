@@ -6,3 +6,4 @@ Install sway packages:
       - swayidle
       - waybar
       - dmenu
+      - xorg-server-xwayland
