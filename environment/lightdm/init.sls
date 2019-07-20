@@ -9,7 +9,9 @@ Configure lightdm to use webkit greeter:
     - name: /etc/lightdm/lightdm.conf
     - marker_start: "# START Seat0 config -DO-NOT-EDIT-"
     - marker_end: "# END Seat0 config --"
-    - content: '[Seat:*]\ngreeter-session=lightdm-webkit2-greeter'
+    - content: |
+        [Seat:*]
+        greeter-session=lightdm-webkit2-greeter
     - append_if_not_found: True
     - backup: '.bak'
     - show_changes: True
