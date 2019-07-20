@@ -10,3 +10,4 @@ Install sway packages:
       - mako
       - slurp
       - xorg-server-xwayland
+      - alacritty
