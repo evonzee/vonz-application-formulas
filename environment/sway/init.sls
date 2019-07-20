@@ -6,4 +6,7 @@ Install sway packages:
       - swayidle
       - waybar
       - dmenu
+      - grim
+      - mako
+      - slurp
       - xorg-server-xwayland

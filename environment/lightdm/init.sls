@@ -3,7 +3,7 @@ Install lightdm packages:
     - pkgs:
       - lightdm
       - lightdm-webkit2-greeter
-      - xorg-server-common
+      - xorg-server
 
 Configure lightdm to use webkit greeter:
   file.blockreplace:
