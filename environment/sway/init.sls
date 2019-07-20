@@ -6,6 +6,7 @@ Install sway packages:
       - swayidle
       - waybar
       - dmenu
+      - rofi
       - grim
       - mako
       - slurp
