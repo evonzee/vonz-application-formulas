@@ -5,6 +5,7 @@ Install sway packages:
       - swaylock
       - swayidle
       - waybar
+      - i3status
       - dmenu
       - rofi
       - grim
