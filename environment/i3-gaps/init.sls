@@ -6,3 +6,5 @@ Install i3 gaps packages:
       - i3lock
       - i3blocks
       - dmenu
+      - rofi
+      - termite
