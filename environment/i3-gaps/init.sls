@@ -8,3 +8,5 @@ Install i3 gaps packages:
       - dmenu
       - rofi
       - termite
+      - thunar
+      - thunar-volman
