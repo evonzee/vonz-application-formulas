@@ -17,4 +17,4 @@ start-sddm-service:
     - enable: True
     - watch:
       - file: set-sddm-theme
-      - pkg: install-ssdm
+      - pkg: install-sddm
