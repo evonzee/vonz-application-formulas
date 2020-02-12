@@ -6,3 +6,8 @@ Install i3 gaps packages:
       - i3lock
       - i3blocks
       - dmenu
+      - ranger
+      - rofi
+      - termite
+      - thunar
+      - thunar-volman
