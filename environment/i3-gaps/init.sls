@@ -11,3 +11,4 @@ Install i3 gaps packages:
       - termite
       - thunar
       - thunar-volman
+      - xorg-xsetroot # for background blanking
