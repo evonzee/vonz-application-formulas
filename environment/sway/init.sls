@@ -11,6 +11,6 @@ Install sway packages:
       - grim
       - mako
       - slurp
-      - xorg-server-xwayland
+      - xorg-xwayland
       - termite
       - caja
