@@ -2,6 +2,6 @@
 cronie:
   pkg.installed
 
-cronied:
+cronie:
   service.running:
     - enable: True
