@@ -2,11 +2,10 @@
 {% set config = salt['grains.filter_by']({
   'Windows': {
     'installer': {
-      discord: 'chocolatey.installed',
+      'discord': 'chocolatey.installed',
     },
   },
   'Arch': {
-    'package': 'discord',
     'installer': {
       'discord': {
         'cmd.run': [
