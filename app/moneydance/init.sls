@@ -1,4 +1,3 @@
-{% from "app/moneydance/map.jinja" import moneydance with context %}
+{% from tpldir ~ "/map.jinja" import config with context %}
 
-{{ moneydance.package }}:
-  {{ moneydance.installer }}
+{{ config.installer }}

@@ -1,4 +1,3 @@
-{% from "app/gimp/map.jinja" import gimp with context %}
+{% from tpldir ~ "/map.jinja" import config with context %}
 
-{{ gimp.package }}:
-  {{ gimp.installer }}
+{{ config.installer }}

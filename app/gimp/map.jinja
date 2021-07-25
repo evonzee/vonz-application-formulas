@@ -1,11 +1,13 @@
 {% set user = salt['pillar.get']('users:primary-user') %}
-{% set gimp = salt['grains.filter_by']({
-    'Windows': {
-        'package': 'gimp',
-        'installer': 'chocolatey.installed'
-    },
-    'Arch': {
-        'package': 'gimp',
-        'installer': 'pkg.installed'
-    },
+{% set config = salt['grains.filter_by']({
+  'Windows': {
+    'installer': {
+      'gimp': 'chocolatey.installed'
+    }
+  },
+  'Arch': {
+    'installer': {
+      'gimp': 'pkg.installed'
+    }
+  },
 }, merge=salt['pillar.get']('gimp:lookup')) %}

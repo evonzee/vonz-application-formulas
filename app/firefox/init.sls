@@ -1,4 +1,3 @@
-{% from "app/firefox/map.jinja" import firefox with context %}
+{% from tpldir ~ "/map.jinja" import config with context %}
 
-{{ firefox.package }}:
-  {{ firefox.installer }}
+{{ config.installer }}

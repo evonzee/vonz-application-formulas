@@ -1,7 +1,6 @@
-{% from "app/discord/map.jinja" import discord with context %}
+{% from tpldir ~ "/map.jinja" import config with context %}
 
 include:
   - app/flatpak
 
-{{ discord.package }}:
-  {{ discord.installer }}
+{{ config.installer }}

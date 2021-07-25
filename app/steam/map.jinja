@@ -1,17 +1,19 @@
 {% set user = salt['pillar.get']('users:primary-user') %}
-{% set steam = salt['grains.filter_by']({
-    'Windows': {
-        'package': 'steam',
-        'installer': 'chocolatey.installed'
+{% set config = salt['grains.filter_by']({
+  'Windows': {
+    'installer': {
+      'steam': 'chocolatey.installed'
+    }
+  },
+  'Arch': {
+    'installer': {
+      'steam': {
+        'cmd.run': [
+          {'unless': 'flatpak list | grep Steam'},
+          {'runas': user},
+          {'name': ' flatpak install -y flathub com.valvesoftware.Steam'}
+        ]
+      },
     },
-    'Arch': {
-        'package': 'steam',
-        'installer': {
-          'cmd.run': [
-            {'unless': 'flatpak list | grep Steam'},
-            {'runas': user},
-            {'name': ' flatpak install -y flathub com.valvesoftware.Steam'}
-          ]
-        }
-    },
+  },
 }, merge=salt['pillar.get']('steam:lookup')) %}

@@ -1,7 +1,6 @@
-{% from "app/steam/map.jinja" import steam with context %}
+{% from tpldir ~ "/map.jinja" import config with context %}
 
 include:
   - app/flatpak
 
-{{ steam.package }}:
-  {{ steam.installer }}
+{{ config.installer }}

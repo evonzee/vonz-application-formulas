@@ -1,12 +1,13 @@
 {% set user = salt['pillar.get']('users:primary-user') %}
-{% set moneydance = salt['grains.filter_by']({
-    'Windows': {
-        'package': 'moneydance',
-        'installer': 'chocolatey.installed'
-    },
-    'Arch': {
-        'package': 'moneydance',
-        'installer': {
+{% set config = salt['grains.filter_by']({
+  'Windows': {
+    'installer': {
+      'moneydance': 'chocolatey.installed'
+    }
+  },
+  'Arch': {
+    'installer': {
+      'moneydance': {
         'cmd.run': [
           {'unless': 'pacman -Qi moneydance'},
           {'runas': 'aur-builder'},
@@ -14,4 +15,5 @@
         ]
       },
     },
+  },
 }, merge=salt['pillar.get']('moneydance:lookup')) %}

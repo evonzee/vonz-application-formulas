@@ -1,17 +1,20 @@
 {% set user = salt['pillar.get']('users:primary-user') %}
-{% set discord = salt['grains.filter_by']({
-    'Windows': {
-        'package': 'discord',
-        'installer': 'chocolatey.installed'
+{% set config = salt['grains.filter_by']({
+  'Windows': {
+    'installer': {
+      discord: 'chocolatey.installed',
     },
-    'Arch': {
-        'package': 'discord',
-        'installer': {
-          'cmd.run': [
-            {'unless': 'flatpak list | grep discord'},
-            {'runas': user},
-            {'name': ' flatpak install -y flathub com.discordapp.Discord'}
-          ]
-        }
+  },
+  'Arch': {
+    'package': 'discord',
+    'installer': {
+      'discord': {
+        'cmd.run': [
+          {'unless': 'flatpak list | grep discord'},
+          {'runas': user},
+          {'name': ' flatpak install -y flathub com.discordapp.Discord'}
+        ]
+      },
     },
+  },
 }, merge=salt['pillar.get']('discord:lookup')) %}
