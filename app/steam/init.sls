@@ -3,4 +3,4 @@
 include:
   - app/flatpak
 
-{{ config.installer | yaml}}
+{{ config.installer | yaml(False) }}
