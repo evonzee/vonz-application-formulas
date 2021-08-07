@@ -8,7 +8,7 @@ Install i3 gaps packages:
       - dmenu
       - ranger
       - rofi
-      - termite
+      - alacritty
       - thunar
       - thunar-volman
       - xorg-xsetroot # for background blanking

@@ -12,5 +12,5 @@ Install sway packages:
       - mako
       - slurp
       - xorg-xwayland
-      - termite
+      - alacritty
       - caja
