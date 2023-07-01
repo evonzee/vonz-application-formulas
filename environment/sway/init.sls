@@ -15,3 +15,4 @@ Install sway packages:
       - xorg-xwayland
       - alacritty
       - caja
+      - xdg-desktop-portal-wlr
