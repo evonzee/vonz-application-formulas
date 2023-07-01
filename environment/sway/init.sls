@@ -4,6 +4,7 @@ Install sway packages:
       - sway
       - swaylock
       - swayidle
+      - swaybg
       - waybar
       - i3status
       - dmenu
