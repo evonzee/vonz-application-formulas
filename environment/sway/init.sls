@@ -14,5 +14,8 @@ Install sway packages:
       - slurp
       - xorg-xwayland
       - alacritty
+      - thunar
+      - thunar-volman
+      - gvfs-smb
       - caja
       - xdg-desktop-portal-wlr
