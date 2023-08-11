@@ -12,4 +12,5 @@ Install i3 gaps packages:
       - thunar
       - thunar-volman
       - gvfs-smb
+      - scrot # for screenshots
       - xorg-xsetroot # for background blanking
