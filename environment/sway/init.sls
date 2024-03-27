@@ -19,3 +19,5 @@ Install sway packages:
       - gvfs-smb
       - caja
       - xdg-desktop-portal-wlr
+      - libsecret
+      - gnome-keyring
