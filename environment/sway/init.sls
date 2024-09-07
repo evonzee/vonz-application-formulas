@@ -1,23 +1,29 @@
 Install sway packages:
   pkg.installed:
     - pkgs:
-      - sway
-      - swaylock
-      - swayidle
-      - swaybg
-      - waybar
-      - i3status
-      - dmenu
-      - rofi
-      - grim
-      - mako
-      - slurp
-      - xorg-xwayland
       - alacritty
+      - caja
+      - dmenu
+      - gnome-keyring
+      - grim
+      - gvfs-smb
+      - i3status
+      - libsecret
+      - mako
+      - pavucontrol
+      - pipewire # newer audio/video sharing subsystem
+      - pipewire-pulse # replaces pulseaudio
+      - ranger
+      - rofi
+      - slurp
+      - sway
+      - swaybg
+      - swayidle
+      - swaylock
       - thunar
       - thunar-volman
-      - gvfs-smb
-      - caja
+      - tmux
+      - waybar
       - xdg-desktop-portal-wlr
-      - libsecret
-      - gnome-keyring
+      - xdg-user-dirs
+      - xorg-xwayland
