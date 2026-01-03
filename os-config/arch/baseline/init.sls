@@ -2,8 +2,8 @@ Install OS baseline:
   pkg.installed:
     - name: base
 
-Install Devel headers:
-  pkg.group_installed:
+Install Devel headers which are now a metapackage:
+  pkg.installed:
     - name: base-devel
 
 Install common items that used to be part of base group:
